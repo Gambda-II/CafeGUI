@@ -27,7 +27,8 @@
             <Button x:Name="btnSpecialCoffee" Content="Special Coffee" Width="200" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="25" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Canvas>
         <Canvas x:Name="cnvDisplayOrderAndStatus" Height="240" Width="290" Canvas.Left="460" Canvas.Top="60">
-            <Image Height="250" Width="300" Source="/OIG.WCxzC.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" d:IsHidden="True"/>
+            <TextBlock x:Name="tbCappucino" TextWrapping="Wrap" Text="TextBlock" Width="150" Height="250" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock x:Name="tbSpecialCoffee" TextWrapping="Wrap" Text="TextBlock" Width="150" Height="250" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="150" Canvas.Top="0"/>
         </Canvas>
         <Canvas x:Name="cnvDisplayTotal" Height="60" Width="350" Canvas.Left="91" Canvas.Top="263" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="tbDisplayTotal" TextWrapping="Wrap" Text="Ihre Bestellung BITTE" Width="350" Height="60" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontFamily="Showcard Gothic" FontSize="25" TextAlignment="Center" LineHeight="20"/>
