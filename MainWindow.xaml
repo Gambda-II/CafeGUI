@@ -21,14 +21,19 @@
             <TextBlock x:Name="tbDisplayMessage" TextWrapping="Wrap" Text="WILLKOMMEN" Width="350" Height="60" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF08FF00" FontFamily="Showcard Gothic" FontSize="25" TextAlignment="Center" LineHeight="20"/>
         </Canvas>
         <Canvas x:Name="cnvCappuccino" Height="60" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="820" Canvas.Top="150">
-            <Button x:Name="btnCappuccino" Content="Cappuccino" Width="200" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="25" FontFamily="Showcard Gothic"/>
+            <Button x:Name="btnCappuccino" Content="Cappuccino" Width="200" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="25" FontFamily="Showcard Gothic" Click="btnCappuccino_Click"/>
         </Canvas>
         <Canvas x:Name="cnvSpecialCoffee" Height="60" Width="200" Canvas.Left="820" Canvas.Top="250" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btnSpecialCoffee" Content="Special Coffee" Width="200" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="25" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="btnSpecialCoffee" Content="Special Coffee" Width="200" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="25" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSpecialCoffee_Click"/>
         </Canvas>
-        <Canvas x:Name="cnvDisplayOrderAndStatus" Height="240" Width="290" Canvas.Left="460" Canvas.Top="60">
-            <TextBlock x:Name="tbCappucino" TextWrapping="Wrap" Text="TextBlock" Width="150" Height="250" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBlock x:Name="tbSpecialCoffee" TextWrapping="Wrap" Text="TextBlock" Width="150" Height="250" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="150" Canvas.Top="0"/>
+        <Canvas x:Name="cnvDisplayOrderAndStatus" Height="240" Width="300" Canvas.Left="460" Canvas.Top="60">
+            <TextBlock x:Name="tbCappucinoTitle" TextWrapping="Wrap" Text="Cappucino" Width="150" Height="30" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" FontFamily="Showcard Gothic" Foreground="Black"/>
+            <TextBlock x:Name="tbSpecialCoffeeTitle" TextWrapping="Wrap" Text="Special Covfefe" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="150" Canvas.Top="0" FontFamily="Showcard Gothic" FontSize="18"/>
+            <TextBlock x:Name="tbCappucinoDescription" TextWrapping="Wrap" Text="Firsch gebrüht mit einer KAKAO Note" Width="150" Height="90" Canvas.Left="0" Canvas.Top="60" FontSize="15" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="tbSpecialCoffeeDescription" TextWrapping="Wrap" Text="Überraschend gut mit viel Milchschaum" Width="150" Height="90" Canvas.Left="150" Canvas.Top="60" FontFamily="Showcard Gothic" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="tbCappucinoPrice" TextWrapping="Wrap" Text="1,80 € " Width="150" Height="30" Canvas.Left="0" Canvas.Top="30" FontSize="18" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Right"/>
+            <TextBlock x:Name="tbSpecialCoffeePrice" TextWrapping="Wrap" Text="2,30 € " Width="150" Height="30" Canvas.Left="150" Canvas.Top="30" FontFamily="Showcard Gothic" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Right"/>
+            <TextBlock x:Name="tbPreparing" TextWrapping="Wrap" Text="---" Width="300" Height="120" Canvas.Left="0" Canvas.Top="120" FontSize="25" FontFamily="Showcard Gothic" Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFFD200"/>
         </Canvas>
         <Canvas x:Name="cnvDisplayTotal" Height="60" Width="350" Canvas.Left="91" Canvas.Top="263" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="tbDisplayTotal" TextWrapping="Wrap" Text="Ihre Bestellung BITTE" Width="350" Height="60" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontFamily="Showcard Gothic" FontSize="25" TextAlignment="Center" LineHeight="20"/>

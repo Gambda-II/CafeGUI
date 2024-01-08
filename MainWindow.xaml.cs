@@ -1,5 +1,7 @@
-﻿using System.Diagnostics;
+﻿using System.CodeDom;
+using System.Diagnostics;
 using System.Text;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -18,6 +20,7 @@ namespace CafeGUI;
 public partial class MainWindow : Window
 {
     int sum = 0;
+    const int specialPrice = 300, cappuccinoPrice = 400;
 
     public MainWindow()
     {
@@ -28,7 +31,7 @@ public partial class MainWindow : Window
 
     public void StartUp()
     {
-        wndMain.Background.Opacity = 1.0;
+        tbPreparing.Visibility = Visibility.Hidden;
     }
 
     private void Button_MouseEnter(object sender, MouseEventArgs e)
@@ -66,13 +69,23 @@ public partial class MainWindow : Window
     {
         sum += value;
         tbDisplayMessage.Text = "";
-        if (value >= 100)
+
+        if (value < 0)
         {
-            tbDisplayMessage.Text = $"Added {value / 100} Euro";
+            tbDisplayMessage.Foreground = Brushes.Red;
         }
         else
         {
-            tbDisplayMessage.Text = $"Added {value} Cent";
+            tbDisplayMessage.Foreground = Brushes.LimeGreen;
+        }
+
+        if (value >= 100 || value <= -100)
+        {
+            tbDisplayMessage.Text = $" {value / 100} Euro";
+        }
+        else
+        {
+            tbDisplayMessage.Text = $" {value} Cent";
         }
         UpdateTotal();
     }
@@ -83,6 +96,53 @@ public partial class MainWindow : Window
         string cent = (sum % 100).ToString("00");
 
         string total = euro + "," + cent + " €";
-        tbDisplayTotal.Text = "Einbezahlt: " + total;
+        tbDisplayTotal.Text = "Summe: " + total;
     }
+
+    private void btnSpecialCoffee_Click(object sender, RoutedEventArgs e)
+    {
+        if (IsSumBiggerThanPrice(specialPrice))
+        {
+            AddValueToSum(-specialPrice);
+            PrepareCoffee();
+            return;
+        }
+        tbDisplayMessage.Foreground = Brushes.Red;
+        tbDisplayMessage.Text = "Mehr Geld einzahlen";
+    }
+
+    private void btnCappuccino_Click(object sender, RoutedEventArgs e)
+    {
+        if (IsSumBiggerThanPrice(cappuccinoPrice))
+        {
+            AddValueToSum(-cappuccinoPrice);
+            PrepareCoffee();
+            return;
+        }
+        tbDisplayMessage.Text = "Mehr Geld einzahlen";
+    }
+
+    private bool IsSumBiggerThanPrice(int price)
+    {
+        return price <= sum;
+    }
+
+    private void PrepareCoffee()
+    {
+        tbPreparing.Visibility = Visibility.Visible;
+        tbPreparing.Text = "Wird zubereitet! Bitte warten.";
+
+        // Wait
+        StartMachine();
+
+
+        tbDisplayMessage.Text = "Bitteschön!";
+        tbPreparing.Visibility = Visibility.Hidden;
+    }
+
+    private async void StartMachine()
+    {
+
+    }
+
 }
