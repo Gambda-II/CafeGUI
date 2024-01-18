@@ -12,8 +12,6 @@
     <None Remove="8408082.gif" />
     <None Remove="coffee BG new.png" />
     <None Remove="coffee BG.png" />
-    <None Remove="coffee template - brewing.jpg" />
-    <None Remove="coffee template - waiting.jpg" />
     <None Remove="OIG.WCxzC.jpg" />
     <None Remove="windowIcon.png" />
   </ItemGroup>
@@ -22,8 +20,6 @@
     <Resource Include="8408082.gif" />
     <Resource Include="coffee BG new.png" />
     <Resource Include="coffee BG.png" />
-    <Resource Include="coffee template - brewing.jpg" />
-    <Resource Include="coffee template - waiting.jpg" />
     <Resource Include="OIG.WCxzC.jpg" />
     <Resource Include="windowIcon.png" />
   </ItemGroup>

@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         Title="KaffeeMaschine" Height="909" Width="1143" ResizeMode="NoResize" Icon="/windowIcon.png">
     <Window.Background>
-        <ImageBrush Opacity="1" Stretch="Uniform" ImageSource="/coffee BG new.png"/>
+        <ImageBrush Opacity="1" Stretch="Uniform" ImageSource="/coffee BG new.png"/> 
     </Window.Background>
     <Canvas x:Name="cnvMain">
-        <Canvas x:Name="cnvCoins" Height="60" Width="350" Canvas.Left="91" Canvas.Top="62" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button x:Name="btnTenCent" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="10" Canvas.Top="5" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="{x:Null}" Cursor="Hand" Click="btnTenCent_Click"/>
-            <Button x:Name="btnTwentyCent" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="79" Canvas.Top="5" Foreground="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTwentyCent_Click"/>
-            <Button x:Name="btnFiftyCent" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="143" Canvas.Top="5" Foreground="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnFiftyCent_Click"/>
-            <Button x:Name="btnOneEuro" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="207" Canvas.Top="5" Foreground="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnOneEuro_Click"/>
-            <Button x:Name="btnTwoEuro" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="273" Canvas.Top="5" Foreground="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTwoEuro_Click"/>
+        <Canvas x:Name="cnvCoins" Height="60" Width="350" Canvas.Left="88" Canvas.Top="60" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button x:Name="btnTenCent" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="10" Canvas.Top="5" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="{x:Null}" Cursor="Hand" Click="btnTenCent_Click" Focusable="False" Opacity="0" />
+            <Button x:Name="btnTwentyCent" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="79" Canvas.Top="5" Foreground="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTwentyCent_Click" Opacity="0"/>
+            <Button x:Name="btnFiftyCent" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="143" Canvas.Top="5" Foreground="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnFiftyCent_Click" Opacity="0"/>
+            <Button x:Name="btnOneEuro" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="207" Canvas.Top="5" Foreground="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnOneEuro_Click" Opacity="0"/>
+            <Button x:Name="btnTwoEuro" Content="0" Background="{x:Null}" BorderBrush="{x:Null}" Width="53" Height="50" Canvas.Left="273" Canvas.Top="5" Foreground="{x:Null}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTwoEuro_Click" Opacity="0"/>
         </Canvas>
         <Canvas x:Name="cnvDisplayText" Height="60" Width="350" Canvas.Left="91" Canvas.Top="173" HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBlock x:Name="tbDisplayMessage" TextWrapping="Wrap" Text="WILLKOMMEN" Width="350" Height="60" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF08FF00" FontFamily="Showcard Gothic" FontSize="25" TextAlignment="Center" LineHeight="20"/>
@@ -31,8 +31,8 @@
             <TextBlock x:Name="tbSpecialCoffeeTitle" TextWrapping="Wrap" Text="Special Covfefe" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="150" Canvas.Top="0" FontFamily="Showcard Gothic" FontSize="18"/>
             <TextBlock x:Name="tbCappucinoDescription" TextWrapping="Wrap" Text="Firsch gebrüht mit einer KAKAO Note" Width="150" Height="90" Canvas.Left="0" Canvas.Top="60" FontSize="15" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBlock x:Name="tbSpecialCoffeeDescription" TextWrapping="Wrap" Text="Überraschend gut mit viel Milchschaum" Width="150" Height="90" Canvas.Left="150" Canvas.Top="60" FontFamily="Showcard Gothic" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock x:Name="tbCappucinoPrice" TextWrapping="Wrap" Text="1,80 € " Width="150" Height="30" Canvas.Left="0" Canvas.Top="30" FontSize="18" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Right"/>
-            <TextBlock x:Name="tbSpecialCoffeePrice" TextWrapping="Wrap" Text="2,30 € " Width="150" Height="30" Canvas.Left="150" Canvas.Top="30" FontFamily="Showcard Gothic" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Right"/>
+            <TextBlock x:Name="tbCappucinoPrice" TextWrapping="Wrap" Text="4,00 € " Width="150" Height="30" Canvas.Left="0" Canvas.Top="30" FontSize="18" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Right"/>
+            <TextBlock x:Name="tbSpecialCoffeePrice" TextWrapping="Wrap" Text="3,00 € " Width="150" Height="30" Canvas.Left="150" Canvas.Top="30" FontFamily="Showcard Gothic" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Right"/>
             <TextBlock x:Name="tbPreparing" TextWrapping="Wrap" Text="---" Width="300" Height="120" Canvas.Left="0" Canvas.Top="120" FontSize="25" FontFamily="Showcard Gothic" Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFFD200"/>
         </Canvas>
         <Canvas x:Name="cnvDisplayTotal" Height="60" Width="350" Canvas.Left="91" Canvas.Top="263" HorizontalAlignment="Center" VerticalAlignment="Center">
